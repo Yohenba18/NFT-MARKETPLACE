@@ -1,6 +1,6 @@
-# Basic Sample Hardhat Project
+# NFT-MARKETPLACE
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+### Made using NEXT.JS, TailwindCSS, Hardhat, Ether.js, Axios, IPFS and depolyed in POLYGON
 
 Try running some of the following tasks:
 
@@ -13,3 +13,4 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
