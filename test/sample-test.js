@@ -7,7 +7,7 @@ describe("NFTMarket", function () {
     const Market = await ethers.getContractFactory("NFTMarket")
     const market = await Market.deploy()
     await market.deployed()
-    const marketAddress = merket.address
+    const marketAddress = market.address
 
     const NFT = await ethers.getContractFactory("NFT")
     const nft = await NFT.deploy(marketAddress)
