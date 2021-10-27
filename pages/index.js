@@ -3,8 +3,30 @@ import Image from "next/image";
 import axios from "axios";
 import Web3Modal from "web3Modal"
 import {ethers} from "ethers"
+import {nftaddress,nftmarketaddress} from "../config"
+import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
+import Market from '../artifacts/contracts/Market.sol/NFTMarket.json'
+import { useEffect, useState } from "react";
 
 export default function Home() {
+
+  const [nfts, setNfts] = useState([])
+  const [loadingState, setLoadingState] = useState('not-loaded')
+
+  useEffect(() => {
+    loadNFTs()
+  }, [])
+
+  const loadNFTs = async () => {
+    const provider = new ethers.providers.JsonRpcProvider()
+    const tokenContract = new ethers.Contract(nftaddress, NFT.abi,provider)
+    const marketContract = new ethers.Contract(nftmarketaddress, Market.abi, provider)
+    const data = await marketContract.fetchMarketItems()
+
+  }
+  
+
+
   return (
     <div className="flex justify-center">
       <Head>
