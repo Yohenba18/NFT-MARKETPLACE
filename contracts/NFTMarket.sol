@@ -42,7 +42,7 @@ contract NFTMarket is ReentrancyGuard {
     /* Returns the listing price of the contract */
     function getListingPrice() public view returns (uint256) {
         return listingPrice;
-  }
+    }
 
     function createMarketItem(
         address nftContract,

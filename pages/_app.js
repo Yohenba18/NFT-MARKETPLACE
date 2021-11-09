@@ -6,9 +6,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <nav className="border-b p-6">
         <p className="text-4xl font-bold">NFT Marketplace</p>
-        <div className="flex mt-4">
+        <div className="flex mt-4 text-center">
           <Link href="/">
-            <a className="mr-4 text-pink-500">
+            <a className="mr-4 text-pink-500 ">
               Home
             </a>
           </Link>
