@@ -1,9 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
 import axios from "axios";
 import Web3Modal from "web3Modal";
 import { ethers } from "ethers";
-import { nftaddress, nftmarketaddress } from "../config";
+import { nftaddress, nftmarketaddress, rpc_url } from "../config";
 import NFT from "../artifacts/contracts/NFT.sol/NFT.json";
 import Market from "../artifacts/contracts/NFTMarket.sol/NFTMarket.json";
 import { useEffect, useState } from "react";
@@ -17,7 +15,7 @@ export default function Home() {
   }, []);
 
   const loadNFTs = async () => {
-    const provider = new ethers.providers.JsonRpcProvider();
+    const provider = new ethers.providers.JsonRpcProvider(rpc_url);
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(
       nftmarketaddress,
