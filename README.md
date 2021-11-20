@@ -1,6 +1,6 @@
 # NFT-MARKETPLACE
 
-### Made using NEXT.JS, TailwindCSS, Hardhat, Ether.js, Axios, IPFS and depolyed in POLYGON
+### Made using NEXT.JS, TailwindCSS, Hardhat, Ether.js, Axios, IPFS 
 
 Try running some of the following tasks:
 
